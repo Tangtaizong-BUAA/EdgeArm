@@ -68,6 +68,11 @@ an appropriate macOS OpenGL context. Do not use the Linux EGL settings there.
 
 ## Download and evaluate weights
 
+The same four Apache-2.0 checkpoints are also available directly in
+[GitHub Release v0.1.0](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/tag/v0.1.0),
+alongside `checksums.json`. Download all four `.pt` files into `checkpoints/run102`.
+These are identical to the Hugging Face weights; training data is not included.
+
 ```bash
 edgearm download --output checkpoints/run102
 edgearm evaluate --weights checkpoints/run102 --output outputs/benchmark-replay \
@@ -126,4 +131,3 @@ Release organization follows the code/data/model separation used by
 [LeRobot](https://github.com/huggingface/lerobot) and the explicit training/evaluation
 entry points of [ACT](https://github.com/tonyzhaozh/act). This is not an official
 release of either project. Please cite [CITATION.cff](CITATION.cff).
-

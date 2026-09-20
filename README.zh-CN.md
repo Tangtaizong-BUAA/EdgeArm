@@ -16,6 +16,10 @@
 
 ## 使用
 
+四个最终权重也可直接从 [GitHub Release v0.1.0](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/tag/v0.1.0)
+下载，附有 `checksums.json`。将四个 `.pt` 文件放入 `checkpoints/run102` 即可用于评估。
+它们与 Hugging Face 发布版本完全一致，采用 Apache-2.0；不包含训练数据。
+
 详见英文首页的安装命令；必须保留源码检出目录中的SO101资源。
 
 ```bash
@@ -37,4 +41,3 @@ edgearm run recipes/spatial_memory.json
 - [复现与发布状态](docs/reproducibility.md)：测试与未完成项分开报告。
 
 代码和发布权重采用Apache-2.0，第三方资产保留原始归属。
-
