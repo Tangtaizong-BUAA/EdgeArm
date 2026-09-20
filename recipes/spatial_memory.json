@@ -1,0 +1,1 @@
+{"stage":"spatial-memory","arguments":["--manifest","data/spatial_sequences/manifest.json","--vision","checkpoints/initializers/vision.pt","--control","checkpoints/initializers/control.pt","--output","outputs/spatial_memory","--updates","1500","--eval-every","500","--chunk","12","--workers","9","--wall-seconds","3300"]}

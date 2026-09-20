@@ -1,0 +1,75 @@
+<mujoco model="edgearm_push_block">
+  <include file="scene.xml" />
+
+  <option timestep="0.02" gravity="0 0 -9.81" integrator="implicitfast" />
+
+  <asset>
+    <material name="block_blue" rgba="0.05 0.22 0.92 1" />
+    <material name="target_green" rgba="0.05 0.8 0.25 0.38" />
+    <material name="push_plate" rgba="0.9 0.9 0.85 1" />
+  </asset>
+
+  <worldbody>
+    <light name="edgearm_key_light" pos="0.1 -0.45 1.2" dir="0.15 0.3 -1" directional="true" />
+
+    <geom
+      name="edgearm_desk"
+      type="box"
+      pos="0.22 0 0.015"
+      size="0.42 0.32 0.01"
+      rgba="0.62 0.64 0.58 1"
+      friction="0.85 0.02 0.001" />
+
+    <geom
+      name="target_zone"
+      type="cylinder"
+      pos="0.31 0.09 0.0315"
+      size="0.055 0.001"
+      material="target_green"
+      contype="0"
+      conaffinity="0" />
+
+    <body name="push_block" pos="0.22 -0.08 0.051">
+      <freejoint name="push_block_freejoint" />
+      <inertial pos="0 0 0" mass="0.055" diaginertia="0.000012 0.000012 0.000012" />
+      <geom
+        name="push_block_geom"
+        type="box"
+        size="0.025 0.025 0.025"
+        material="block_blue"
+        friction="0.9 0.02 0.001"
+        solref="0.004 1"
+        solimp="0.9 0.95 0.001" />
+      <site name="block_center" pos="0 0 0" size="0.006" rgba="0 0 0 0" />
+    </body>
+
+    <body name="fixed_push_plate" mocap="true" pos="0.14 -0.08 0.062">
+      <geom
+        name="fixed_push_plate_geom"
+        type="box"
+        size="0.008 0.06 0.025"
+        material="push_plate"
+        friction="1.0 0.01 0.001" />
+    </body>
+
+    <camera
+      name="edgearm_overhead"
+      pos="0.22 -0.04 0.62"
+      quat="0.704 0.064 0.064 0.704"
+      fovy="45" />
+    <camera
+      name="edgearm_angled"
+      pos="0.48 -0.36 0.35"
+      xyaxes="0.65 0.76 0 -0.34 0.29 0.90"
+      fovy="42" />
+  </worldbody>
+
+  <keyframe>
+    <key
+      name="home"
+      qpos="0 -0.55 0.95 -0.45 0 0.35 0.22 -0.08 0.051 1 0 0 0"
+      ctrl="0 -0.55 0.95 -0.45 0 0.35"
+      mpos="0.14 -0.08 0.062"
+      mquat="1 0 0 0" />
+  </keyframe>
+</mujoco>

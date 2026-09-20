@@ -1,0 +1,24 @@
+{
+  "repo_id": "YuxuanGong/EdgeArm-Run102",
+  "revision": "eb6790641467ee79026edecc6e422700df6f23e0",
+  "training_data_public": false,
+  "license": "apache-2.0",
+  "files": {
+    "checkpoint.pt": {
+      "sha256": "4a548c91ee232288de6c90604e9d5403d11ac6240a275746e23e472ca05ff4f6",
+      "bytes": 6485167
+    },
+    "control.pt": {
+      "sha256": "8d7770bea25c4c2a3cee84bf8d9e4824348bea9e8836da5b47fdec4c16ebfd72",
+      "bytes": 2363668
+    },
+    "keypoint.pt": {
+      "sha256": "7a8645d50f2895bf88aa2616b59e1a030e0dfa471dab4b08a7c72989deb098a3",
+      "bytes": 1022604
+    },
+    "vision.pt": {
+      "sha256": "3b9eacb8adcdb81a63f69c4fda356facbd8d9fd34b1a946b6b3f97a409ffeac2",
+      "bytes": 2394025
+    }
+  }
+}

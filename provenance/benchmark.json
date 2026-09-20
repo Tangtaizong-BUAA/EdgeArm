@@ -1,0 +1,31 @@
+{
+  "episodes": 72,
+  "successes": 51,
+  "success_rate": 0.7083333333333334,
+  "wilson_95_episode_approximation": [
+    0.5949425733065095,
+    0.8006194381116332
+  ],
+  "scene_group_bootstrap_95": [
+    0.638888888888889,
+    0.7777777777777777
+  ],
+  "per_route_successes": [
+    6,
+    8,
+    2,
+    6,
+    8,
+    8,
+    1,
+    7,
+    5
+  ],
+  "per_route_episodes": 8,
+  "training_data_public": false,
+  "timeouts": 20,
+  "out_of_bounds": 1,
+  "hard_failures": 0,
+  "source": "Run102 frozen independent evaluation",
+  "stage": "CONTACT_TRANSPORT_HOLD"
+}

@@ -1,0 +1,1 @@
+{"stage":"keypoints","arguments":["--manifest","data/spatial_sequences/manifest.json","--output","outputs/keypoints","--updates","1800","--eval-every","600"]}

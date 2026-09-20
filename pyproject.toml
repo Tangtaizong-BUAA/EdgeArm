@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "edgearm-research"
+version = "0.1.0"
+description = "Single-wrist visual block pushing with spatial memory and staged policy adaptation"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+license = {file = "LICENSE"}
+authors = [{name = "Yuxuan Gong"}]
+dependencies = [
+  "torch>=2.8,<3", "numpy>=2,<3", "mujoco==3.10.0", "scipy>=1.14,<2",
+  "Pillow>=10,<13", "h5py>=3.13,<4", "imageio>=2.37,<3", "PyYAML>=6,<7",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "build>=1"]
+hub = ["huggingface-hub>=0.34,<2"]
+export = ["lerobot>=0.5.2,<0.6"]
+
+[project.scripts]
+edgearm = "edgearm_release.cli:main"
+
+[project.urls]
+Repository = "https://github.com/Tangtaizong-BUAA/EdgeArm"
+Models = "https://huggingface.co/YuxuanGong/EdgeArm-Run102"
+
+[tool.setuptools.packages.find]
+where = ["Simulation/EdgeArm"]
+include = ["edgearm*", "edgearm_release*"]
+
+[tool.pytest.ini_options]
+testpaths = ["Simulation/EdgeArm/tests", "tests"]
+pythonpath = ["Simulation/EdgeArm"]
+

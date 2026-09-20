@@ -1,0 +1,13 @@
+EdgeArm research code and model release
+Copyright 2026 Yuxuan Gong and EdgeArm contributors
+
+This release includes SO-101 robot model and mesh assets from
+TheRobotStudio/SO-ARM100, licensed under Apache License 2.0.
+Original upstream citation is retained in UPSTREAM_CITATION.cff.
+SO-101 motor properties credit Open Duck Mini in Simulation/SO101/README.md.
+Existing copyright notices in individual files remain in force.
+
+The package adds EdgeArm simulation scenes, data processing, model training,
+causal observation contracts, and evaluation tools. See provenance/source-files.json
+for hashes of the extracted implementation. Training data is not included.
+

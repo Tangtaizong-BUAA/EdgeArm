@@ -1,0 +1,1 @@
+{"stage":"prepare-sequences","arguments":["--roots","data/run76/collection_1","data/run76/collection_2","data/run76/collection_3","--output","data/spatial_sequences","--workers","6","--stride","8","--variants","3"]}

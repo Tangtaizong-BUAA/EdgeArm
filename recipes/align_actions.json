@@ -1,0 +1,1 @@
+{"stage":"align-actions","arguments":["--source","outputs/dagger","--checkpoint","outputs/spatial_memory/spatial_step_500.pt","--vision","checkpoints/initializers/vision.pt","--control","outputs/dagger/control_round_2.pt","--keypoint","outputs/keypoints/keypoints_step_1800.pt","--output","outputs/aligned_actions","--workers","9"]}
