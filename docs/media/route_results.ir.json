@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0.0",
+  "figure_id": "route_results",
+  "claim": "同一冻结候选在8个新场景组、9条等权路线的72次独立运行中成功51次；路线差异明显。",
+  "route": "quantitative_code",
+  "recipe": "forest interval and complete categorical matrix",
+  "panels": [
+    {
+      "panel_id": "a",
+      "purpose": "逐路线点估计与Wilson近似95%区间"
+    },
+    {
+      "panel_id": "b",
+      "purpose": "展示全部8×9场景结果，保留失败与组结构"
+    }
+  ],
+  "encodings": [
+    {
+      "field": "route",
+      "channel": "y",
+      "unit": null
+    },
+    {
+      "field": "success",
+      "channel": "x",
+      "unit": "%"
+    },
+    {
+      "field": "terminal_reason",
+      "channel": "color",
+      "unit": null
+    }
+  ],
+  "annotations": [],
+  "style_tokens": {
+    "palette": "okabe-ito",
+    "base_font_pt": 8.5,
+    "width_mm": 160,
+    "height_mm": 86
+  },
+  "exports": [
+    "svg",
+    "pdf",
+    "png",
+    "python"
+  ],
+  "invariants": [
+    "data",
+    "units",
+    "claim",
+    "transform",
+    "uncertainty"
+  ],
+  "provenance": {
+    "renderer": "matplotlib",
+    "seed": 713,
+    "source_script": "papers/edgearm_wrist_memory_20260919/scripts/build_evidence_figures.py"
+  }
+}

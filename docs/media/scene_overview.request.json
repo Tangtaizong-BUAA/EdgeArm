@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0.0",
+  "audience": "中文机器人学习研究论文读者",
+  "medium": "研究论文；未指定投稿期刊",
+  "final_width_mm": 160,
+  "language": "zh-CN",
+  "data_sources": [
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/summary.json",
+      "sha256": "b31a57158240326fb1f4e4ab3d168bda1843d3d709c1e71a4ea8d8efc0708e92"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/candidate_freeze.json",
+      "sha256": "0eb0ca52a7752212177448e09bb078e7a70c862f21fb78de2811e615ff4ea4e9"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/episodes/joint_feasible/camera_clearance/memory_fast_keypoints/episode_882000900/trace.npz",
+      "sha256": "b2a5b539de120ffccfb55e7002561ad29ad7501fb8c426ffb58ca868e65467ac"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/episodes/joint_feasible/camera_clearance/memory_fast_keypoints/episode_882000900/result.json",
+      "sha256": "ec730eb31edfee0a198108d9448e47e609813d9df453f68b13d9e99631514d3f"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run94_frozen_fast_policy.py",
+      "sha256": "9fb271cfc049ecf12b29ffb520b4645909c10193a9e21c73afd389bcf93c288f"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run102_frozen_joint_policy.py",
+      "sha256": "163828c1952876e40606a7a94b8d4d69b527cdd2504f27e8f17dad72da226305"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run42/session.py",
+      "sha256": "d0f2001d8297745b05a2e022eed5e554d5a86d665ac1d584a187459dc84dd000"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run42/domain.py",
+      "sha256": "57e0ddad49b5d31cf56bb831de0637ef43934dbbef5349f62f657b9147c0126b"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/multichoice_scene_v1.py",
+      "sha256": "85f3333551ccb2adfd26705ea66522d2c6ec9d00a96935413dbfd751c0c0f7eb"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/production_env.py",
+      "sha256": "3417b28d16957dcf7bb31eebee82422f2e6e4d6e2e28490fcd374bfbb61f727c"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/config.py",
+      "sha256": "a879018e35422050105502a472a140a84b7c95b62130066825ae9d1f97eb692a"
+    },
+    {
+      "path": "Simulation/SO101/edgearm_m2_m4_scene.xml",
+      "sha256": "c7027738cb6aa654fc36b371c52039c56f26ba83dab072e9820175d27d03ace8"
+    }
+  ],
+  "variables": [
+    {
+      "name": "wrist_rgb",
+      "unit": "8-bit RGB; 160 x 120 pixels",
+      "role": "stored observation"
+    }
+  ],
+  "uncertainty": null,
+  "editable_format": "python",
+  "claim_locked": true,
+  "figure_id": "scene_overview",
+  "claim": "任务包含三个方块、三个目标区域与刚性腕部相机；总览为同一seed初始场景的本地解释性重建，右图是原始腕部观测。"
+}

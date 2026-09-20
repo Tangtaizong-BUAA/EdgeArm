@@ -1,0 +1,26 @@
+{
+  "rows": 13,
+  "column_types": {
+    "count": "integer",
+    "route/source/split": "category"
+  },
+  "missingness": 0,
+  "ranges": {
+    "action_rows": [
+      3406,
+      6954
+    ],
+    "frames": [
+      1586,
+      28840
+    ]
+  },
+  "grouping": {
+    "routes": 9,
+    "perception_sources": 2,
+    "splits": 2
+  },
+  "repeated_measure": "many rows/frames per trajectory",
+  "transforms": "none",
+  "paired": false
+}

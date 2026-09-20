@@ -8,7 +8,8 @@
 - Print-first stage recipes, a portable CLI, guarded historical independent
   evaluation, and a separately labeled public benchmark-replay entry.
 - Exact four frozen Run102 checkpoints in the model repository, SHA-256 verified.
-- Public aggregate benchmark statistics; no raw evaluation trajectory or training sample.
+- Public aggregate benchmark statistics and two evaluation-only wrist RGB replays.
+  No raw state/action trajectory packages or training samples are distributed.
 
 ## Checks performed for v0.1.0
 
@@ -48,4 +49,3 @@ source hashes. New wrapper/docs files are tracked by the public Git commit.
 Record your environment, source revision, models, seeds, options, and all terminal
 outcomes when evaluating. Keep public benchmark replay distinct from a newly
 pre-registered independent seed set.
-

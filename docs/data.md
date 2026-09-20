@@ -2,9 +2,11 @@
 
 ## Scope and access
 
-Training data remains private. The public repository contains no captured robot
-trajectories or recorded RGB, including failed trajectories. Dataset schemas and
-the code to create your own data are public. Model weights are released separately.
+Training data remains private. The public repository contains no training
+trajectories or training RGB, including failed training trajectories. Two explicitly
+identified Run102 independent-evaluation wrist replays are published as report
+illustrations, not as a training dataset. Dataset schemas and the code to create
+your own data are public. Model weights are released separately.
 
 Do not sum physical episodes, recolored sequences, sampled frames, teacher queries,
 and optimizer draws. They measure different things.
@@ -81,4 +83,3 @@ The native NPZ records preserve causal inputs, labels, and command provenance.
 `edgearm.export_lerobot` is a historical exporter, not a promise that every native
 sequence already matches the latest LeRobotDataset schema. Validate units, action
 semantics, timestamps, and episode splits before exporting to another framework.
-

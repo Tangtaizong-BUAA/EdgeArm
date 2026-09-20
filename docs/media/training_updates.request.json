@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.0.0",
+  "figure_id": "training_updates",
+  "claim": "三个后期训练阶段分别完成3,600、1,200和1,200次优化；后续动作纠偏从Run94第2,400步起，最终采用Run100第600步动作和Run101第1,200步关键点权重。各阶段独立计数，不代表等价算力或全部项目训练量。",
+  "audience": "项目说明书读者",
+  "medium": "A4中文项目说明书",
+  "final_width_mm": 160,
+  "language": "zh-CN",
+  "data_sources": [
+    {
+      "path": "Simulation/EdgeArm/spec/RUN94_FINAL_STATE.json",
+      "sha256": "32a747b01c6f46ff30f8590c1fdab9b4a719c18da8e80a7ca7a7ee0c6d39df48"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run100_feasible_labels_20260919/feasible_labels_01/run_state.json",
+      "sha256": "9c7036f9217d07b02cbcc4d6c279854f7a7be7b30165bb4da8ec6948352de8f3"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run101_candidate_20260919/run_state.json",
+      "sha256": "468118e8cb5c34f10393838d0399f9050e2ee4b58d81a97e28984f42ef5c41f5"
+    },
+    {
+      "path": "Simulation/EdgeArm/spec/RUN83_TO_60_PLAN.zh-CN.md",
+      "sha256": "8040f2fe80f1d8b89b4e48ad443592ba9bee3e5489fec712faed0d3e5034a31a"
+    }
+  ],
+  "variables": [
+    {
+      "field": "completed_updates",
+      "channel": "bar_length",
+      "unit": "优化次数",
+      "scale": "linear-zero"
+    },
+    {
+      "field": "chosen_checkpoint_update",
+      "channel": "diamond_x",
+      "unit": "优化次数",
+      "scale": "linear-zero"
+    }
+  ],
+  "uncertainty": null,
+  "editable_format": "svg",
+  "claim_locked": true
+}

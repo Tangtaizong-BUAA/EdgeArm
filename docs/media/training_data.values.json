@@ -1,0 +1,52 @@
+{
+  "action_rows_by_route": [
+    4169,
+    4079,
+    6351,
+    5748,
+    3406,
+    5284,
+    6954,
+    6364,
+    4177
+  ],
+  "action_total": 46532,
+  "perception_frames": {
+    "new": {
+      "route_frames": [
+        674,
+        703,
+        940,
+        826,
+        635,
+        770,
+        987,
+        905,
+        713
+      ],
+      "train": 7153,
+      "validation": 1683
+    },
+    "old": {
+      "route_frames": [
+        2788,
+        2944,
+        3756,
+        2960,
+        2736,
+        2988,
+        4140,
+        3696,
+        2832
+      ],
+      "train": 28840,
+      "validation": 1586
+    }
+  },
+  "source_fields": {
+    "action_rows": "Run100.actual_online_route_counts",
+    "frames": "Run101.source_counts"
+  },
+  "exclusions": "15 infeasible action labels excluded upstream; not hidden by plotting",
+  "counting": "Rows and RGB frames are repeated samples within trajectories, not independent episodes."
+}

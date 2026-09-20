@@ -35,7 +35,7 @@ def main():
             continue
         if path.suffix.lower() in FORBIDDEN or path.name == '.env':
             findings.append({'path': str(rel), 'rule': 'private-data-or-runtime-file'})
-        if path.suffix.lower() not in {'.py', '.json', '.md', '.toml', '.yml', '.yaml', '.cff', '.xml'}:
+        if path.suffix.lower() not in {'.py', '.json', '.md', '.toml', '.yml', '.yaml', '.cff', '.xml', '.svg'}:
             continue
         checked += 1
         for line_number, line in enumerate(path.read_text().splitlines(), 1):

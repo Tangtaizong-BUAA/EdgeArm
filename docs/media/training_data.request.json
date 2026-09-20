@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0.0",
+  "figure_id": "training_data",
+  "claim": "Run100接受46,532条动作状态标签，九路线均有数据；Run101保留旧/新视觉来源及各自训练/验证划分。状态条数和帧数不可当作独立轨迹数。",
+  "audience": "项目说明书读者",
+  "medium": "A4中文项目说明书",
+  "final_width_mm": 160,
+  "language": "zh-CN",
+  "data_sources": [
+    {
+      "path": "Simulation/EdgeArm/artifacts/run100_feasible_labels_20260919/feasible_labels_01/run_state.json",
+      "sha256": "9c7036f9217d07b02cbcc4d6c279854f7a7be7b30165bb4da8ec6948352de8f3"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run101_candidate_20260919/run_state.json",
+      "sha256": "468118e8cb5c34f10393838d0399f9050e2ee4b58d81a97e28984f42ef5c41f5"
+    }
+  ],
+  "variables": [
+    {
+      "field": "action_rows_by_route",
+      "channel": "bar_length",
+      "unit": "状态条数",
+      "scale": "linear-zero"
+    },
+    {
+      "field": "perception_frames",
+      "channel": "bar_length",
+      "unit": "采样RGB帧数",
+      "scale": "linear-zero"
+    }
+  ],
+  "uncertainty": null,
+  "editable_format": "svg",
+  "claim_locked": true
+}

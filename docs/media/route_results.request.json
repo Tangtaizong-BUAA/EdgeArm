@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "figure_id": "route_results",
+  "claim": "同一冻结候选在8个新场景组、9条等权路线的72次独立运行中成功51次；路线差异明显。",
+  "audience": "机器人学习研究读者",
+  "medium": "中文研究论文初稿，A4",
+  "final_width_mm": 160,
+  "language": "zh-CN",
+  "data_sources": [
+    {
+      "path": "papers/edgearm_wrist_memory_20260919/data/independent_episodes.csv",
+      "sha256": "9aafa46f601dc77c6b56e85f6661f99dbe0c9d46e4b8d6e6cbccee5c232e789d"
+    }
+  ],
+  "variables": [
+    {
+      "field": "route",
+      "channel": "y",
+      "unit": null
+    },
+    {
+      "field": "success",
+      "channel": "x",
+      "unit": "%"
+    },
+    {
+      "field": "terminal_reason",
+      "channel": "color",
+      "unit": null
+    }
+  ],
+  "uncertainty": {
+    "kind": "Wilson approximation",
+    "level": 0.95,
+    "group_dependence": "not removed"
+  },
+  "editable_format": "svg",
+  "claim_locked": true
+}

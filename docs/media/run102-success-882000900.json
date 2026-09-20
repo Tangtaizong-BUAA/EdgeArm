@@ -1,0 +1,35 @@
+{
+  "seed": 882000900,
+  "outcome_from_archived_result": "success",
+  "source_trace_sha256": "b2a5b539de120ffccfb55e7002561ad29ad7501fb8c426ffb58ca868e65467ac",
+  "source": "Run102 frozen independent evaluation; not a training sample",
+  "selection": "lowest seed within outcome category; post-hoc illustration",
+  "steps": 520,
+  "frames": 65,
+  "native_shape": [
+    120,
+    160,
+    3
+  ],
+  "control_hz": 30,
+  "archived_frame_stride": 8,
+  "playback_fps": 3.75,
+  "presentation": "nearest-neighbor enlargement; MP4 compression; no interpolation",
+  "duration_seconds": 17.333333333333332,
+  "new_evaluation": false,
+  "training_data_public": false,
+  "files": {
+    "run102-success-882000900.png": {
+      "sha256": "c6f0576340860b8dfb4b656c6b32b2851ae6bfa237a88107111720ae8cab340a",
+      "bytes": 9688
+    },
+    "run102-success-882000900.gif": {
+      "sha256": "2226c3cadd8364779f30020a625021dbe6c97cf1d6fa212385dee80cd2acbc3d",
+      "bytes": 722217
+    },
+    "run102-success-882000900.mp4": {
+      "sha256": "6748981b908d53abac09e5ff93799a4053e93b42f2a4e04b273436ba92717d73",
+      "bytes": 249607
+    }
+  }
+}

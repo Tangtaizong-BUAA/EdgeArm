@@ -1,0 +1,29 @@
+{
+  "run": [
+    "Run94",
+    "Run100",
+    "Run101"
+  ],
+  "completed_updates": [
+    3600,
+    1200,
+    1200
+  ],
+  "chosen_checkpoint_update": [
+    2400,
+    600,
+    1200
+  ],
+  "chosen_role": [
+    "Run100动作纠偏起点",
+    "最终采用动作权重",
+    "最终采用关键点权重"
+  ],
+  "provenance_note": "Run94 selected checkpoint is the actual Run100 initialization, not Run94 best_control. Run101 total_updates=1800 is a planned ceiling; actual step=1200.",
+  "counting": "Per-stage optimization updates; neither equivalent compute nor total project optimization.",
+  "selection_evidence": [
+    "RUN83_TO_60_PLAN.zh-CN.md:157",
+    "Run100.best_control/evaluations.round",
+    "Run101.best_keypoint/step"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "rows": 3,
+  "column_types": {
+    "stage": "category",
+    "completed_updates": "integer",
+    "chosen_checkpoint_update": "integer"
+  },
+  "missingness": 0,
+  "ranges": {
+    "completed_updates": [
+      1200,
+      3600
+    ],
+    "chosen_checkpoint_update": [
+      600,
+      2400
+    ]
+  },
+  "repeated_measure": "each stage has its own update clock and model",
+  "transforms": "none",
+  "paired": true
+}

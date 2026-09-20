@@ -1,0 +1,223 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:ns2="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink" width="453.543307pt" height="215.433071pt" viewBox="0 0 453.543307 215.433071" version="1.1">
+ <title>training_updates</title><desc>三个后期训练阶段分别完成3,600、1,200和1,200次优化；后续动作纠偏从Run94第2,400步起，最终采用Run100第600步动作和Run101第1,200步关键点权重。各阶段独立计数，不代表等价算力或全部项目训练量。</desc><metadata>
+  <rdf:RDF>
+   <ns2:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+    <dc:date>2026-09-20T03:36:44.292421</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <ns2:Agent>
+      <dc:title>lab-ultra-scientific-visualization figure_export.py; Matplotlib 3.10.6</dc:title>
+     </ns2:Agent>
+    </dc:creator>
+   </ns2:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 215.433071  L 453.543307 215.433071  L 453.543307 0  L 0 0  z " style="fill: #ffffff" />
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 66.00024 186.487753  L 450.543067 186.487753  L 450.543067 3.00024  L 66.00024 3.00024  z " style="fill: #ffffff" />
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 66.00024 186.487753  L 66.00024 3.00024  " clip-path="url(#pdb585f713a)" style="fill: none; stroke: #e4e7ea; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m659dbb5e5d" d="M 0 0  L 0 2.5  " style="stroke: #000000; stroke-width: 0.5" />
+      </defs>
+      <g>
+       <use xlink:href="#m659dbb5e5d" x="66.00024" y="186.487753" style="stroke: #000000; stroke-width: 0.5" />
+      </g>
+     </g>
+     <g id="text_1">
+      
+      <g transform="translate(63.76024 198.214003)">
+       <text>
+        <tspan x="0" y="-0.25" style="font-size: 8px; font-family: 'Arial'">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 120.288639 186.487753  L 120.288639 3.00024  " clip-path="url(#pdb585f713a)" style="fill: none; stroke: #e4e7ea; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m659dbb5e5d" x="120.288639" y="186.487753" style="stroke: #000000; stroke-width: 0.5" />
+      </g>
+     </g>
+     <g id="text_2">
+      
+      <g transform="translate(113.608639 198.214003)">
+       <text>
+        <tspan x="0" y="-0.25" style="font-size: 8px; font-family: 'Arial'">6</tspan>
+        <tspan x="4.449219" y="-0.25" style="font-size: 8px; font-family: 'Arial'">0</tspan>
+        <tspan x="8.898438" y="-0.25" style="font-size: 8px; font-family: 'Arial'">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 174.577038 186.487753  L 174.577038 3.00024  " clip-path="url(#pdb585f713a)" style="fill: none; stroke: #e4e7ea; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m659dbb5e5d" x="174.577038" y="186.487753" style="stroke: #000000; stroke-width: 0.5" />
+      </g>
+     </g>
+     <g id="text_3">
+      
+      <g transform="translate(165.657038 198.214003)">
+       <text>
+        <tspan x="0" y="-0.25" style="font-size: 8px; font-family: 'Arial'">1</tspan>
+        <tspan x="4.449219" y="-0.25" style="font-size: 8px; font-family: 'Arial'">2</tspan>
+        <tspan x="8.898438" y="-0.25" style="font-size: 8px; font-family: 'Arial'">0</tspan>
+        <tspan x="13.347656" y="-0.25" style="font-size: 8px; font-family: 'Arial'">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 283.153836 186.487753  L 283.153836 3.00024  " clip-path="url(#pdb585f713a)" style="fill: none; stroke: #e4e7ea; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m659dbb5e5d" x="283.153836" y="186.487753" style="stroke: #000000; stroke-width: 0.5" />
+      </g>
+     </g>
+     <g id="text_4">
+      
+      <g transform="translate(274.233836 198.214003)">
+       <text>
+        <tspan x="0" y="-0.25" style="font-size: 8px; font-family: 'Arial'">2</tspan>
+        <tspan x="4.449219" y="-0.25" style="font-size: 8px; font-family: 'Arial'">4</tspan>
+        <tspan x="8.898438" y="-0.25" style="font-size: 8px; font-family: 'Arial'">0</tspan>
+        <tspan x="13.347656" y="-0.25" style="font-size: 8px; font-family: 'Arial'">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 391.730635 186.487753  L 391.730635 3.00024  " clip-path="url(#pdb585f713a)" style="fill: none; stroke: #e4e7ea; stroke-width: 0.5; stroke-linecap: square" />
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m659dbb5e5d" x="391.730635" y="186.487753" style="stroke: #000000; stroke-width: 0.5" />
+      </g>
+     </g>
+     <g id="text_5">
+      
+      <g transform="translate(382.810635 198.214003)">
+       <text>
+        <tspan x="0" y="-0.25" style="font-size: 8px; font-family: 'Arial'">3</tspan>
+        <tspan x="4.449219" y="-0.25" style="font-size: 8px; font-family: 'Arial'">6</tspan>
+        <tspan x="8.898438" y="-0.25" style="font-size: 8px; font-family: 'Arial'">0</tspan>
+        <tspan x="13.347656" y="-0.25" style="font-size: 8px; font-family: 'Arial'">0</tspan>
+       </text>
+      </g>
+     </g>
+    </g>
+    <g id="text_6">
+     <text style="font-size: 8.5px; font-family: 'Arial', 'Microsoft YaHei'; text-anchor: middle" x="258.271654" y="210.743456" transform="rotate(-0 258.271654 210.743456)">该阶段的优化次数（各阶段独立计数）</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11" />
+     <g id="text_7">
+      <text style="font-size: 8.5px; font-family: 'Arial', 'Microsoft YaHei'" transform="translate(37.454459 44.452366)">Run94</text>
+      <text style="font-size: 8.5px; font-family: 'Arial', 'Microsoft YaHei'" transform="translate(11.50024 54.045147)">在线动作纠偏</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12" />
+     <g id="text_8">
+      <text style="font-size: 8.5px; font-family: 'Arial', 'Microsoft YaHei'" transform="translate(32.727662 97.645121)">Run100</text>
+      <text style="font-size: 8.5px; font-family: 'Arial', 'Microsoft YaHei'" transform="translate(3.00024 107.218777)">可执行标签对齐</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13" />
+     <g id="text_9">
+      <text style="font-size: 8.5px; font-family: 'Arial', 'Microsoft YaHei'" transform="translate(32.727662 150.842524)">Run101</text>
+      <text style="font-size: 8.5px; font-family: 'Arial', 'Microsoft YaHei'" transform="translate(3.00024 160.385899)">关键点感知适配</text>
+     </g>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 66.00024 35.974808  L 391.730635 35.974808  L 391.730635 55.121331  L 66.00024 55.121331  z " clip-path="url(#pdb585f713a)" style="fill: #0072b2" />
+   </g>
+   <g id="patch_4">
+    <path d="M 66.00024 89.159594  L 174.577038 89.159594  L 174.577038 108.306117  L 66.00024 108.306117  z " clip-path="url(#pdb585f713a)" style="fill: #0072b2" />
+   </g>
+   <g id="patch_5">
+    <path d="M 66.00024 142.34438  L 174.577038 142.34438  L 174.577038 161.490903  L 66.00024 161.490903  z " clip-path="url(#pdb585f713a)" style="fill: #0072b2" />
+   </g>
+   <g id="patch_6">
+    <path d="M 66.00024 186.487753  L 450.543067 186.487753  " style="fill: none; stroke: #000000; stroke-width: 0.5; stroke-linejoin: miter; stroke-linecap: square" />
+   </g>
+   <g id="PathCollection_1">
+    <defs>
+     <path id="m9c6fc884f9" d="M -0 3.872983  L 3.872983 0  L 0 -3.872983  L -3.872983 -0  z " style="stroke: #272b30" />
+    </defs>
+    <g clip-path="url(#pdb585f713a)">
+     <use xlink:href="#m9c6fc884f9" x="283.153836" y="45.548069" style="fill: #ffffff; stroke: #272b30" />
+     <use xlink:href="#m9c6fc884f9" x="120.288639" y="98.732855" style="fill: #ffffff; stroke: #272b30" />
+     <use xlink:href="#m9c6fc884f9" x="174.577038" y="151.917642" style="fill: #ffffff; stroke: #272b30" />
+    </g>
+   </g>
+   <g id="text_10">
+    <text style="font-size: 8px; font-family: 'Arial', 'Microsoft YaHei'; text-anchor: start; fill: #272b30" x="397.611878" y="47.869944" transform="rotate(-0 397.611878 47.869944)">完成 3,600</text>
+   </g>
+   <g id="text_11">
+    <text style="font-size: 8px; font-family: 'Arial', 'Microsoft YaHei'; text-anchor: middle; fill: #272b30" x="283.153836" y="64.360978" transform="rotate(-0 283.153836 64.360978)">纠偏起点 2,400</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 8px; font-family: 'Arial', 'Microsoft YaHei'; text-anchor: start; fill: #272b30" x="180.458281" y="101.05473" transform="rotate(-0 180.458281 101.05473)">完成 1,200</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 8px; font-family: 'Arial', 'Microsoft YaHei'; text-anchor: middle; fill: #272b30" x="120.288639" y="117.392014" transform="rotate(-0 120.288639 117.392014)">采用 600</text>
+   </g>
+   <g id="text_14">
+    <text style="font-size: 8px; font-family: 'Arial', 'Microsoft YaHei'; text-anchor: start; fill: #272b30" x="180.458281" y="154.239517" transform="rotate(-0 180.458281 154.239517)">完成 1,200</text>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 8px; font-family: 'Arial', 'Microsoft YaHei'; text-anchor: middle; fill: #272b30" x="174.577038" y="170.578675" transform="rotate(-0 174.577038 170.578675)">采用 1,200</text>
+   </g>
+   <g id="legend_1">
+    <g id="PathCollection_2">
+     <g>
+      <use xlink:href="#m9c6fc884f9" x="292.543067" y="14.31524" style="fill: #ffffff; stroke: #272b30" />
+     </g>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 8px; font-family: 'Arial', 'Microsoft YaHei'; text-anchor: start" x="304.943067" y="16.41524" transform="rotate(-0 304.943067 16.41524)">后续采用检查点</text>
+    </g>
+    <g id="patch_7">
+     <path d="M 376.943067 16.41524  L 388.943067 16.41524  L 388.943067 10.81524  L 376.943067 10.81524  z " style="fill: #0072b2" />
+    </g>
+    <g id="text_17">
+     <text style="font-size: 8px; font-family: 'Arial', 'Microsoft YaHei'; text-anchor: start" x="395.343067" y="16.41524" transform="rotate(-0 395.343067 16.41524)">实际完成优化</text>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pdb585f713a">
+   <rect x="66.00024" y="3.00024" width="384.542827" height="183.487513" />
+  </clipPath>
+ </defs>
+</svg>

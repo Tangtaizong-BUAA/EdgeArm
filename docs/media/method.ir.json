@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0.0",
+  "figure_id": "method",
+  "claim": "部署时稀疏记忆与当前关键点共同形成估计坐标，动作MLP和几何投影随后执行；真值只用于训练及评估。",
+  "route": "editable_vector",
+  "recipe": "neutral directed method diagram",
+  "panels": [
+    {
+      "panel_id": "a",
+      "purpose": "部署信息流及训练边界"
+    }
+  ],
+  "encodings": [
+    {
+      "field": "source code dependency",
+      "channel": "edge",
+      "unit": null
+    }
+  ],
+  "annotations": [],
+  "style_tokens": {
+    "palette": "okabe-ito",
+    "base_font_pt": 8.5,
+    "width_mm": 160,
+    "height_mm": 120
+  },
+  "exports": [
+    "svg",
+    "pdf",
+    "png",
+    "python"
+  ],
+  "invariants": [
+    "data",
+    "units",
+    "claim",
+    "transform",
+    "uncertainty"
+  ],
+  "provenance": {
+    "renderer": "matplotlib",
+    "seed": 713,
+    "source_script": "papers/edgearm_wrist_memory_20260919/scripts/build_evidence_figures.py"
+  }
+}

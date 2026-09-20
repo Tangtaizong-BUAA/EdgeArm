@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0.0",
+  "figure_id": "training_updates",
+  "claim": "三个后期训练阶段分别完成3,600、1,200和1,200次优化；后续动作纠偏从Run94第2,400步起，最终采用Run100第600步动作和Run101第1,200步关键点权重。各阶段独立计数，不代表等价算力或全部项目训练量。",
+  "route": "quantitative_code",
+  "recipe": "zero-baseline horizontal bars; observed checkpoint markers",
+  "panels": [
+    {
+      "panel_id": "a",
+      "purpose": "区分实际完成工作和最终选用检查点"
+    }
+  ],
+  "encodings": [
+    {
+      "field": "completed_updates",
+      "channel": "bar_length",
+      "unit": "优化次数",
+      "scale": "linear-zero"
+    },
+    {
+      "field": "chosen_checkpoint_update",
+      "channel": "diamond_x",
+      "unit": "优化次数",
+      "scale": "linear-zero"
+    }
+  ],
+  "annotations": [],
+  "style_tokens": {
+    "palette": [
+      "#0072B2",
+      "#A5ADB5",
+      "#272B30"
+    ],
+    "base_font_pt": 8.5,
+    "width_mm": 160,
+    "height_mm": 76
+  },
+  "exports": [
+    "svg",
+    "pdf",
+    "png",
+    "python"
+  ],
+  "invariants": [
+    "data",
+    "units",
+    "claim",
+    "transform",
+    "uncertainty"
+  ],
+  "provenance": {
+    "renderer": "matplotlib",
+    "source_script": "docs/edgearm_project_brief/method_focused/figures/build_training_figures.py",
+    "source_script_sha256": "c1f699ae8ff479414dc256f1f9fc0db1b1a4b3b2927ee4180dc4b7a969e7a0a7",
+    "publication_style": {
+      "profile": "nature",
+      "profile_upstream": "scienceplots",
+      "palette": "okabe_ito_on_white",
+      "width_mm": 160.0,
+      "height_mm": 76.0,
+      "dimension_source": "explicit_mm",
+      "ignored_upstream_defaults": [
+        "axes.prop_cycle",
+        "figure.figsize",
+        "savefig.bbox",
+        "text.latex.preamble",
+        "text.usetex",
+        "xtick.top",
+        "ytick.right"
+      ],
+      "explicit_overrides": {
+        "font.size": 8.5,
+        "axes.labelsize": 8.5,
+        "axes.titlesize": 8.5,
+        "xtick.labelsize": 8,
+        "ytick.labelsize": 8.5,
+        "legend.fontsize": 8
+      },
+      "typography": {
+        "language": "zh-CN",
+        "faces": {
+          "latin": {
+            "path": "/System/Library/Fonts/Supplemental/Arial.ttf",
+            "face_index": 0,
+            "family": "Arial",
+            "style": "Regular",
+            "postscript_name": "ArialMT",
+            "file_sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9"
+          },
+          "cjk": {
+            "path": "msyh.ttc (locally installed; font not redistributed)",
+            "face_index": 0,
+            "family": "Microsoft YaHei",
+            "style": "Regular",
+            "postscript_name": "MicrosoftYaHei",
+            "file_sha256": "d79c55e68b1131eea0cc1c47be4f572d964f28c682e143db2ad09c1e4cb07a3f"
+          }
+        },
+        "scope": "defaults_before_explicit_overrides; inspect final PDF",
+        "aesthetic_acceptance": "not_assessed"
+      },
+      "material_manifest_sha256": "d59fbd4af3eb18ccb07cb8bdcaca964aa34bc67b65aa849935572e7abf7cea2d",
+      "resolver_sha256": "33578885ebbf1f470dc94dd9a7e48a34d1c831d5324349e2ad501f0287a13153",
+      "sources": [
+        {
+          "id": "scienceplots",
+          "url": "https://github.com/garrettj403/SciencePlots.git",
+          "commit": "b9b16959570bd2fbc9ff5118bacc423c3bddd592",
+          "local_path": "vendor/figure-upstreams/SciencePlots",
+          "license": "MIT"
+        },
+        {
+          "id": "tueplots",
+          "url": "https://github.com/pnkraemer/tueplots.git",
+          "commit": "ba2616bfa4ba538d5d27d494ee61f5f1242199e2",
+          "local_path": "vendor/figure-upstreams/tueplots",
+          "license": "MIT"
+        },
+        {
+          "id": "cnsplots",
+          "url": "https://github.com/faridrashidi/cnsplots.git",
+          "commit": "ac8e53a4996aa9d6a281484ababa8bcc90a876d3",
+          "local_path": "vendor/figure-upstreams/cnsplots",
+          "license": "BSD-3-Clause"
+        },
+        {
+          "id": "cmcrameri",
+          "url": "https://github.com/callumrollo/cmcrameri.git",
+          "commit": "78f02a088fa3c4fb4cb8aa92bd8e52389ab9d09a",
+          "local_path": "vendor/figure-upstreams/cmcrameri",
+          "license": "MIT"
+        }
+      ],
+      "notice": "Visual starting point; venue presets are dated and do not certify submission compliance."
+    },
+    "typography": {
+      "font_faces": [
+        {
+          "path": "/System/Library/Fonts/Supplemental/Arial.ttf",
+          "face_index": 0,
+          "family": "Arial",
+          "style": "Regular",
+          "postscript_name": "ArialMT",
+          "file_sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9"
+        },
+        {
+          "path": "msyh.ttc (locally installed; font not redistributed)",
+          "face_index": 0,
+          "family": "Microsoft YaHei",
+          "style": "Regular",
+          "postscript_name": "MicrosoftYaHei",
+          "file_sha256": "d79c55e68b1131eea0cc1c47be4f572d964f28c682e143db2ad09c1e4cb07a3f"
+        }
+      ],
+      "minimum_final_font_pt": 8.0,
+      "warnings": [],
+      "math_glyphs_and_visual_quality": "require_final_export_review"
+    }
+  }
+}

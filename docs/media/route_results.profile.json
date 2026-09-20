@@ -1,0 +1,8 @@
+{
+  "rows": 72,
+  "missing": 0,
+  "route_cardinality": 9,
+  "group_cardinality": 8,
+  "paired": false,
+  "independent_unit": "scene group; nine routes share each group"
+}

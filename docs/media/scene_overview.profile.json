@@ -1,0 +1,33 @@
+{
+  "seed": 882000900,
+  "episode_steps": 520,
+  "stored_frame_count": 65,
+  "frame_shape": [
+    120,
+    160,
+    3
+  ],
+  "dtype": "uint8",
+  "intensity_range": [
+    0,
+    255
+  ],
+  "missingness": "RGB is intentionally retained once every 8 control steps; not a full-rate movie",
+  "row_structure": "one selected episode, paired frames from one camera; no statistical estimator",
+  "selected_steps": [
+    112,
+    272,
+    384,
+    512
+  ],
+  "time_semantics": "control-step offset / 30 Hz, relative to episode loop step 0",
+  "transforms": [
+    "array extraction",
+    "lossless PNG encoding",
+    "nearest-neighbor display enlargement only"
+  ],
+  "excluded_data": "other episodes not shown; case illustration is not a success-rate estimate",
+  "scene_geometry": "frozen Python model-building code with current local SO101 MJCF/mesh assets; source hashes recorded",
+  "geometry_units": "metres",
+  "unknowns": "original server-renderer/MuJoCo version not recovered here"
+}

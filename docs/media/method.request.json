@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.0.0",
+  "figure_id": "method",
+  "claim": "部署时稀疏记忆与当前关键点共同形成估计坐标，动作MLP和几何投影随后执行；真值只用于训练及评估。",
+  "audience": "机器人学习研究读者",
+  "medium": "中文研究论文初稿，A4",
+  "final_width_mm": 160,
+  "language": "zh-CN",
+  "data_sources": [
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run82_spatial_model.py",
+      "sha256": "5e1e18fc366cf4fab0f9e3c40e794d71c7299f91229165535da34e7985e468ab"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run88_keypoint_model.py",
+      "sha256": "0e4c6a1f4892a14ba02342825062f1e2e62697933b3be6fc1cda85bfdc34782b"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run94_frozen_fast_policy.py",
+      "sha256": "9fb271cfc049ecf12b29ffb520b4645909c10193a9e21c73afd389bcf93c288f"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run102_frozen_joint_policy.py",
+      "sha256": "163828c1952876e40606a7a94b8d4d69b527cdd2504f27e8f17dad72da226305"
+    },
+    {
+      "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run99_joint_feasibility.py",
+      "sha256": "e698fb93cd0792f4d12e9ac8dced401dd56c8d5fb8eae9385199124b6cbf8468"
+    }
+  ],
+  "variables": [
+    {
+      "field": "source code dependency",
+      "channel": "edge",
+      "unit": null
+    }
+  ],
+  "uncertainty": null,
+  "editable_format": "svg",
+  "claim_locked": true
+}

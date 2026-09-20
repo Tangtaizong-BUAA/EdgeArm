@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0.0",
+  "figure_id": "scene_overview",
+  "claim": "任务包含三个方块、三个目标区域与刚性腕部相机；总览为同一seed初始场景的本地解释性重建，右图是原始腕部观测。",
+  "route": "hybrid_with_deterministic_overlay",
+  "recipe": "archived_rgb_and_native_mujoco_scene",
+  "panels": [
+    {
+      "panel_id": "a",
+      "purpose": "本地初始场景重建，总览不送给策略"
+    },
+    {
+      "panel_id": "b",
+      "purpose": "原始腕部图像，step 0"
+    }
+  ],
+  "encodings": [
+    {
+      "field": "wrist_rgb",
+      "channel": "image pixels",
+      "scale": "unchanged uint8 RGB",
+      "source_layer": "deterministic"
+    },
+    {
+      "field": "native MuJoCo model and initial integration state",
+      "channel": "scene geometry and original materials",
+      "source_layer": "deterministic",
+      "scale": "native metre coordinates; perspective projection"
+    }
+  ],
+  "annotations": [
+    {
+      "target": "archived_episode",
+      "text": "seed 882000900；事后案例选择"
+    },
+    {
+      "target": "edgearm_wrist camera world position projected by native overview camera",
+      "text": "腕部相机"
+    }
+  ],
+  "style_tokens": {
+    "style_family": "nature",
+    "base_font_pt": 8.5,
+    "language": "zh-CN",
+    "text_color": "#202020",
+    "background": "white"
+  },
+  "exports": [
+    "python",
+    "svg",
+    "pdf",
+    "png"
+  ],
+  "invariants": [
+    "data",
+    "units",
+    "claim",
+    "transform",
+    "uncertainty",
+    "image_pixels"
+  ],
+  "provenance": {
+    "renderer": "MuJoCo native renderer plus Matplotlib",
+    "seed": 882000900,
+    "selection": "post hoc, minimum seed among archived safe_success episodes",
+    "no_image_generation": true,
+    "no_training": true,
+    "no_server_access": true,
+    "source": {
+      "path": "papers/edgearm_wrist_memory_20260919/scripts/collect_scene_assets.py",
+      "sha256": "99c9c4b1eaab9df4048c7d5baf2ea94748ba20588a1734e2454d98d56a1ee2b8"
+    },
+    "all_vectors": false,
+    "materials": {
+      "profile": "nature",
+      "profile_upstream": "scienceplots",
+      "palette": "okabe_ito_on_white",
+      "width_mm": 160.0,
+      "height_mm": 79.0,
+      "dimension_source": "explicit_mm",
+      "ignored_upstream_defaults": [
+        "axes.prop_cycle",
+        "figure.figsize",
+        "savefig.bbox",
+        "text.latex.preamble",
+        "text.usetex",
+        "xtick.top",
+        "ytick.right"
+      ],
+      "explicit_overrides": {
+        "font.size": 8.5,
+        "axes.titlesize": 8.5,
+        "axes.titleweight": "normal",
+        "text.color": "#202020",
+        "figure.constrained_layout.use": false
+      },
+      "typography": {
+        "language": "zh-CN",
+        "faces": {
+          "latin": {
+            "path": "/System/Library/Fonts/Supplemental/Arial.ttf",
+            "face_index": 0,
+            "family": "Arial",
+            "style": "Regular",
+            "postscript_name": "ArialMT",
+            "file_sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9"
+          },
+          "cjk": {
+            "path": "msyh.ttc (locally installed; font not redistributed)",
+            "face_index": 0,
+            "family": "Microsoft YaHei",
+            "style": "Regular",
+            "postscript_name": "MicrosoftYaHei",
+            "file_sha256": "d79c55e68b1131eea0cc1c47be4f572d964f28c682e143db2ad09c1e4cb07a3f"
+          }
+        },
+        "scope": "defaults_before_explicit_overrides; inspect final PDF",
+        "aesthetic_acceptance": "not_assessed"
+      },
+      "material_manifest_sha256": "d59fbd4af3eb18ccb07cb8bdcaca964aa34bc67b65aa849935572e7abf7cea2d",
+      "resolver_sha256": "33578885ebbf1f470dc94dd9a7e48a34d1c831d5324349e2ad501f0287a13153",
+      "sources": [
+        {
+          "id": "scienceplots",
+          "url": "https://github.com/garrettj403/SciencePlots.git",
+          "commit": "b9b16959570bd2fbc9ff5118bacc423c3bddd592",
+          "local_path": "vendor/figure-upstreams/SciencePlots",
+          "license": "MIT"
+        },
+        {
+          "id": "tueplots",
+          "url": "https://github.com/pnkraemer/tueplots.git",
+          "commit": "ba2616bfa4ba538d5d27d494ee61f5f1242199e2",
+          "local_path": "vendor/figure-upstreams/tueplots",
+          "license": "MIT"
+        },
+        {
+          "id": "cnsplots",
+          "url": "https://github.com/faridrashidi/cnsplots.git",
+          "commit": "ac8e53a4996aa9d6a281484ababa8bcc90a876d3",
+          "local_path": "vendor/figure-upstreams/cnsplots",
+          "license": "BSD-3-Clause"
+        },
+        {
+          "id": "cmcrameri",
+          "url": "https://github.com/callumrollo/cmcrameri.git",
+          "commit": "78f02a088fa3c4fb4cb8aa92bd8e52389ab9d09a",
+          "local_path": "vendor/figure-upstreams/cmcrameri",
+          "license": "MIT"
+        }
+      ],
+      "notice": "Visual starting point; venue presets are dated and do not certify submission compliance."
+    },
+    "sources": [
+      {
+        "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/summary.json",
+        "sha256": "b31a57158240326fb1f4e4ab3d168bda1843d3d709c1e71a4ea8d8efc0708e92"
+      },
+      {
+        "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/candidate_freeze.json",
+        "sha256": "0eb0ca52a7752212177448e09bb078e7a70c862f21fb78de2811e615ff4ea4e9"
+      },
+      {
+        "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/episodes/joint_feasible/camera_clearance/memory_fast_keypoints/episode_882000900/trace.npz",
+        "sha256": "b2a5b539de120ffccfb55e7002561ad29ad7501fb8c426ffb58ca868e65467ac"
+      },
+      {
+        "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/episodes/joint_feasible/camera_clearance/memory_fast_keypoints/episode_882000900/result.json",
+        "sha256": "ec730eb31edfee0a198108d9448e47e609813d9df453f68b13d9e99631514d3f"
+      },
+      {
+        "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run94_frozen_fast_policy.py",
+        "sha256": "9fb271cfc049ecf12b29ffb520b4645909c10193a9e21c73afd389bcf93c288f"
+      },
+      {
+        "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run102_frozen_joint_policy.py",
+        "sha256": "163828c1952876e40606a7a94b8d4d69b527cdd2504f27e8f17dad72da226305"
+      },
+      {
+        "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run42/session.py",
+        "sha256": "d0f2001d8297745b05a2e022eed5e554d5a86d665ac1d584a187459dc84dd000"
+      },
+      {
+        "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/run42/domain.py",
+        "sha256": "57e0ddad49b5d31cf56bb831de0637ef43934dbbef5349f62f657b9147c0126b"
+      },
+      {
+        "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/multichoice_scene_v1.py",
+        "sha256": "85f3333551ccb2adfd26705ea66522d2c6ec9d00a96935413dbfd751c0c0f7eb"
+      },
+      {
+        "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/production_env.py",
+        "sha256": "3417b28d16957dcf7bb31eebee82422f2e6e4d6e2e28490fcd374bfbb61f727c"
+      },
+      {
+        "path": "Simulation/EdgeArm/artifacts/run102_independent_20260919/independent_01/frozen_source/edgearm/config.py",
+        "sha256": "a879018e35422050105502a472a140a84b7c95b62130066825ae9d1f97eb692a"
+      },
+      {
+        "path": "Simulation/SO101/edgearm_m2_m4_scene.xml",
+        "sha256": "c7027738cb6aa654fc36b371c52039c56f26ba83dab072e9820175d27d03ace8"
+      }
+    ],
+    "typography": {
+      "font_faces": [
+        {
+          "path": "/System/Library/Fonts/Supplemental/Arial.ttf",
+          "face_index": 0,
+          "family": "Arial",
+          "style": "Regular",
+          "postscript_name": "ArialMT",
+          "file_sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9"
+        },
+        {
+          "path": "msyh.ttc (locally installed; font not redistributed)",
+          "face_index": 0,
+          "family": "Microsoft YaHei",
+          "style": "Regular",
+          "postscript_name": "MicrosoftYaHei",
+          "file_sha256": "d79c55e68b1131eea0cc1c47be4f572d964f28c682e143db2ad09c1e4cb07a3f"
+        }
+      ],
+      "minimum_final_font_pt": 8.0,
+      "warnings": [],
+      "math_glyphs_and_visual_quality": "require_final_export_review"
+    },
+    "transforms": [
+      "lossless extraction",
+      "nearest-neighbor display; no image enhancement"
+    ],
+    "post_hoc_case_selection": true,
+    "native_raster_sizes": [
+      [
+        1200,
+        900
+      ],
+      [
+        160,
+        120
+      ]
+    ],
+    "native_effective_ppi": [
+      361.7088607594936,
+      90.71428571428571
+    ],
+    "initial_scene_reconstruction_audit": {
+      "path": "papers/edgearm_wrist_memory_20260919/figures/scene_reconstruction_audit.json",
+      "sha256": "05891b3cbda91bb375594d4cbf5ceff35097c221e7bccd986773dfb97daf912a"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "source": "Archived Run80, Run94, Run99, Run100, Run101 and frozen Run102",
+  "new_training_or_evaluation": false,
+  "run80": {
+    "physical_attempts": 432,
+    "optimizer_updates": 1040,
+    "development_episodes_per_round": 36,
+    "rounds": [0, 3, 6, 9, 12],
+    "successes": [21, 20, 13, 14, 6],
+    "retained_residual": "zero-residual baseline"
+  },
+  "late_development": {
+    "episodes_per_candidate": 36,
+    "candidates": ["Run94 round 2", "Run99", "Run100 step 600", "Run100 step 1200", "Run101 step 600", "Run101 step 1200"],
+    "successes": [26, 24, 25, 25, 23, 28],
+    "hard_failures": [3, 0, 0, 0, 0, 0],
+    "out_of_bounds": [0, 1, 0, 0, 0, 0],
+    "same_development_groups_reused": true,
+    "single_factor_causal_ablation": false
+  },
+  "training_data_public": false,
+  "evaluation_media_only": [882000900, 882000902]
+}
