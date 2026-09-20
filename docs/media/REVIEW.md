@@ -7,8 +7,12 @@
 - The actual PNGs were visually inspected for labels, units, clipping and panel
   order. Quantitative figures retain their original scales, denominators and
   legend distinctions. SVG retains text; PNG is the font-stable GitHub display.
+- The featured videos now show successful difficult routes 6 and 2 (seeds
+  882000924 and 882000938), replacing the previous mixed-outcome presentation.
+  Selection follows the two lowest-success routes in the complete frozen test;
+  aggregate statistics and scientific figures are unchanged.
 - Two evaluation-only videos were encoded from original ordered wrist frames.
-  FFprobe confirmed 65 / 113 frames, H.264, 640×480 and 15/4 fps. Full decoding
+  FFprobe confirmed 84 frames each, H.264, 640×480 and 15/4 fps. Full decoding
   of both files completed without errors. This is media verification, not a new
   policy or physics evaluation. Representative frames were also viewed.
 - GitHub Release SHA-256 digests matched the local video metadata. Training

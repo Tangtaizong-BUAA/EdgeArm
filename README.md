@@ -16,16 +16,19 @@ EdgeArm 将这个问题组织为一条可追踪的训练主线：**连续序列�
 
 *图 1｜左侧依据冻结代码与本地几何资产重建初始场景，帮助理解布局；右侧是存档腕部画面。总览相机不输入策略。*
 
-## 1. 先看机器人实际看到了什么
+## 1. 难路径成功演示
 
-| 成功案例 · seed 882000900 | 超时案例 · seed 882000902 |
+| 难路径 · 路线 6 | 难路径 · 路线 2 |
 |:--:|:--:|
-| [![成功轨迹腕部回放](docs/media/run102-success-882000900.gif)](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-success-882000900.mp4) | [![超时轨迹腕部回放](docs/media/run102-timeout-882000902.gif)](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-timeout-882000902.mp4) |
-| [完整 MP4 · 17.33 秒](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-success-882000900.mp4) | [完整 MP4 · 30.13 秒](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-timeout-882000902.mp4) |
+| [![路线6成功轨迹腕部回放](docs/media/run102-success-882000924.gif)](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-success-882000924.mp4) | [![路线2成功轨迹腕部回放](docs/media/run102-success-882000938.gif)](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-success-882000938.mp4) |
+| [完整 MP4 · 22.40 秒](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-success-882000924.mp4) | [完整 MP4 · 22.40 秒](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-success-882000938.mp4) |
+| seed 882000924 · 670 步完成 · 稳定保持 3 秒 | seed 882000938 · 671 步完成 · 稳定保持 3 秒 |
 
-这是 **Run102 独立评估的原始腕部 RGB 回放**，不是训练视频或重新运行模型。每类选取最小 seed 的一个案例作为说明，不以个例替代总体成绩。控制频率为 30 Hz，原档每 8 步保存一帧，因此视频按 **3.75 fps** 播放；仅最近邻放大和编码，没有补帧或生成画面。末帧不必恰好等于成功判定瞬间。[媒体来源与校验](docs/media/README.md)
+这是 **Run102 独立评估中两条难路径的成功回放**，均达到覆盖与连续保持 3 秒的完整判定。难度依据本轮九路线的实测表现：路线 6 和路线 2 的成功率最低，因此分别选取其中的成功轨迹展示空间记忆与闭环控制的能力；它们是精选演示，总体成绩仍按全部 72 次测试统计。
 
-![同一成功案例的固定观察、开始推动、推动后期与末段原始画面](docs/media/wrist_sequence.png)
+视频直接来自存档腕部 RGB，不是训练视频或重新运行模型。控制频率为 30 Hz，原档每 8 步保存一帧，因此按 **3.75 fps** 播放；仅最近邻放大和编码，没有补帧或生成画面。末帧不必恰好等于成功判定瞬间。[媒体来源与选择依据](docs/media/README.md)
+
+![另一成功案例882000900的固定观察、开始推动、推动后期与末段原始画面](docs/media/wrist_sequence.png)
 
 *图 2｜腕部视野随动作变化：看见过不代表现在还看得见，保存过坐标也不代表物体仍在原地。这正是空间记忆与当前视觉需要协作的原因。*
 

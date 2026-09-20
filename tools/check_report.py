@@ -26,8 +26,10 @@ def main():
     assert benchmark['successes'] + benchmark['timeouts'] + benchmark['out_of_bounds'] == 72
     metadata = list(media.glob('run102-*.json'))
     assert len(metadata) == 2
+    assert {json.loads(p.read_text())['route'] for p in metadata} == {2, 6}
     for path in metadata:
         row = json.loads(path.read_text())
+        assert row['outcome_from_archived_result'] == 'success'
         assert row['new_evaluation'] is False and row['training_data_public'] is False
         assert row['playback_fps'] == row['control_hz'] / row['archived_frame_stride']
         for name, expected in row['files'].items():

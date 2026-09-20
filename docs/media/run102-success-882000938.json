@@ -1,0 +1,36 @@
+{
+  "seed": 882000938,
+  "outcome_from_archived_result": "success",
+  "source_trace_sha256": "3a8e8958b38b5072f258a53aadf8f021baa9297410f6e0ea1071d6b39b293683",
+  "source": "Run102 frozen independent evaluation; not a training sample",
+  "selection": "Lowest-seed successful episode on route 2, the second-lowest-success route in the frozen 72-episode evaluation; post-hoc difficult-route showcase",
+  "route": 2,
+  "steps": 671,
+  "frames": 84,
+  "native_shape": [
+    120,
+    160,
+    3
+  ],
+  "control_hz": 30,
+  "archived_frame_stride": 8,
+  "playback_fps": 3.75,
+  "presentation": "nearest-neighbor enlargement; MP4 compression; no interpolation",
+  "duration_seconds": 22.4,
+  "new_evaluation": false,
+  "training_data_public": false,
+  "files": {
+    "run102-success-882000938.png": {
+      "sha256": "250005374c9bab5f81758f94bab0a1ff4ed74d90d143f9a3caadea36e97d3b28",
+      "bytes": 11610
+    },
+    "run102-success-882000938.gif": {
+      "sha256": "95834bf2d7fdbb19810e34ba6e6da31780d57919f506c3ea622b4342f879a933",
+      "bytes": 950838
+    },
+    "run102-success-882000938.mp4": {
+      "sha256": "ea6db7f5d96e26380f391499daf567cbd391de02fe387d7d704ea6deb47a1d88",
+      "bytes": 360807
+    }
+  }
+}

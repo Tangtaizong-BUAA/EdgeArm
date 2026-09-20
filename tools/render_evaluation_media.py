@@ -20,6 +20,8 @@ def main():
     parser.add_argument('--output', required=True, type=Path)
     parser.add_argument('--seed', required=True, type=int)
     parser.add_argument('--outcome', choices=['success', 'timeout'], required=True)
+    parser.add_argument('--selection', default='lowest seed within outcome category; post-hoc illustration')
+    parser.add_argument('--route', type=int)
     args = parser.parse_args()
     args.output.mkdir(parents=True, exist_ok=True)
     with np.load(args.trace, allow_pickle=False) as archive:
@@ -45,7 +47,8 @@ def main():
         'seed': args.seed, 'outcome_from_archived_result': args.outcome,
         'source_trace_sha256': hashlib.sha256(args.trace.read_bytes()).hexdigest(),
         'source': 'Run102 frozen independent evaluation; not a training sample',
-        'selection': 'lowest seed within outcome category; post-hoc illustration',
+        'selection': args.selection,
+        'route': args.route,
         'steps': steps, 'frames': len(rgb), 'native_shape': [120, 160, 3],
         'control_hz': 30, 'archived_frame_stride': 8, 'playback_fps': 3.75,
         'presentation': 'nearest-neighbor enlargement; MP4 compression; no interpolation',

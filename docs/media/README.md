@@ -8,17 +8,21 @@ private logs are distributed here.
 
 | Case | Original frozen result | Frames | Playback | Download |
 |:--|:--|--:|:--|:--|
-| Run102 / 882000900 | Success, 520 steps | 65 | 3.75 fps; 17.33 s | [MP4](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-success-882000900.mp4) |
-| Run102 / 882000902 | Timeout, 900 steps | 113 | 3.75 fps; 30.13 s | [MP4](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-timeout-882000902.mp4) |
+| Run102 / 882000924 / route 6 | Success, 670 steps; 3 s hold | 84 | 3.75 fps; 22.40 s | [MP4](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-success-882000924.mp4) |
+| Run102 / 882000938 / route 2 | Success, 671 steps; 3 s hold | 84 | 3.75 fps; 22.40 s | [MP4](https://github.com/Tangtaizong-BUAA/EdgeArm/releases/download/v0.1.0/run102-success-882000938.mp4) |
 
-Selection was post hoc: lowest seed among successes and lowest seed among
-timeouts in the frozen Run102 independent archive. These are two examples, not
-the evidence used to compute 51/72. Native wrist frames are 160×120 RGB, stored
+Selection is a post-hoc difficult-route success showcase. Route 6 (1/8 successes)
+and route 2 (2/8) were the two lowest-success routes in the frozen Run102 test.
+We use the only route-6 success and the lowest-seed route-2 success. Both reached
+maximum coverage 1.0 and a 3-second hold without teacher execution. Difficulty
+here is empirical route performance, not a claim of obstacles or a separately
+defined hard benchmark. These selected successes do not replace the complete
+51/72 aggregate. Native wrist frames are 160×120 RGB, stored
 every eighth control step at 30 Hz. We encode every stored frame in order,
 without interpolation, retiming, image enhancement or scene generation. The
 last displayed frame need not be the terminal success-transition frame; encoding
-a whole final sample interval also makes the timeout video slightly longer than
-30 s. MP4 uses nearest-neighbor enlargement to 640×480 and H.264 compression;
+a whole final sample interval can extend playback slightly beyond the last
+recorded control instant. MP4 uses nearest-neighbor enlargement to 640×480 and H.264 compression;
 GIF previews use 320×240 and palette quantization. No policy was rerun.
 
 Each accompanying `run102-*.json` records selection, trace checksum, frame count,
