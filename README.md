@@ -85,13 +85,15 @@ EdgeArm 将这个问题组织为一条可追踪的训练主线：**连续序列�
 
 概念上，每个槽位经历以下更新；精确实现见 [`run82_spatial_model.py`](Simulation/EdgeArm/edgearm/run82_spatial_model.py)：
 
-$$
-\hat{\mathbf p}_{t}^{-}=\hat{\mathbf p}_{t-1}+d\,f_{motion}(\mathbf h_{t-1},\mathbf c_t,\hat{\mathbf p}_{t-1})\,\Delta t,
-\qquad
-\hat{\mathbf p}_t=\hat{\mathbf p}_{t}^{-}+\mathbf K_t(\mathbf z_t-\hat{\mathbf p}_{t}^{-}).
-$$
+```math
+\hat{\mathbf p}_{t}^{-}=\hat{\mathbf p}_{t-1}+d f_{motion}(\mathbf h_{t-1},\mathbf c_t,\hat{\mathbf p}_{t-1})\Delta t.
+```
 
-$d$ 区分动态方块与静态目标，$\mathbf c_t$ 来自已发生的本体和动作历史；$\mathbf z_t$ 是图像估计，$\mathbf K_t$ 结合写入门、可见性与位置方差。动态物体先预测有界位移，静态目标不施加相同运动项。稀疏邻居、视觉特征与本体上下文共同进入 GRU，更新隐状态。
+```math
+\hat{\mathbf p}_t=\hat{\mathbf p}_{t}^{-}+\mathbf K_t(\mathbf z_t-\hat{\mathbf p}_{t}^{-}).
+```
+
+其中 d 区分动态方块与静态目标，cₜ 来自已发生的本体和动作历史；zₜ 是图像估计，Kₜ 结合写入门、可见性与位置方差。动态物体先预测有界位移，静态目标不施加相同运动项。稀疏邻居、视觉特征与本体上下文共同进入 GRU，更新隐状态。
 
 因此记忆不是“上一帧缓存”：**动作改变先验，视觉纠正先验，不确定度决定信任程度。** 当前图像不可靠时有状态可以保留，物体移动后又能修正旧估计。
 
@@ -163,7 +165,7 @@ $$
 
 位置和运动先验使用归一化 Smooth-L1，点集使用双向最近邻距离，可见性用二元交叉熵；不确定度项将误差与方差联系。几何误差以 20 mm 为尺度，动作辅助系数前 200 次更新为 0.25，之后为 1。
 
-AdamW 对视觉、基础动作和新增空间模块分别使用 $10^{-5}$、$3\times10^{-5}$、$2\times10^{-4}$ 学习率，梯度范数上限 5。初训中的辅助动作头不作为最终执行 actor。
+AdamW 对视觉、基础动作和新增空间模块分别使用 `1e-5`、`3e-5`、`2e-4` 学习率，梯度范数上限 5。初训中的辅助动作头不作为最终执行 actor。
 
 ### B. DAgger：教模型从自己走偏的位置继续
 
@@ -216,7 +218,7 @@ $$
 冻结当时视觉与基础动作网络，增加 **118 → 128 → 128 → 6** 的 Tanh 残差 actor。每 4 步决策一次，潜变量从标准差 0.7 的高斯分布采样：
 
 $$
-\mathbf a_t=\operatorname{clip}(\mathbf a_t^{base}+0.06\tanh(\mathbf z_t),-1,1).
+\mathbf a_t=\mathrm{clip}(\mathbf a_t^{base}+0.06\tanh(\mathbf z_t),-1,1).
 $$
 
 同场景采 4 个策略噪声复本，用其余复本的完整回报均值作留一基线：
@@ -230,14 +232,14 @@ $$
 ### 7.2 势函数差分奖励与裁剪优化
 
 $$
-\Phi(s)=-10\operatorname{clip}(d,0,0.5)+2\operatorname{clip}(c,0,1)+0.5\operatorname{clip}(h/3,0,1),
+\Phi(s)=-10\mathrm{clip}(d,0,0.5)+2\mathrm{clip}(c,0,1)+0.5\mathrm{clip}(h/3,0,1),
 $$
 
 $$
-r_t=\Phi(s_{t+1})-\Phi(s_t)+10\mathbb{1}_{success}-5\mathbb{1}_{hard\ failure\ or\ out\ of\ bounds}-0.001.
+r_t=\Phi(s_{t+1})-\Phi(s_t)+10 I_{success}-5 I_{fail}-0.001.
 $$
 
-距离 $d$ 单位为米，覆盖 $c$ 是比例，保持 $h$ 单位为秒。带符号势差避免把往复运动累计成单向正进展。物体真值只在动作确定后的奖励与审计侧读取。
+距离 d 单位为米，覆盖 c 是比例，保持 h 单位为秒；I_success 表示任务成功，I_fail 表示硬失败或物体越界。带符号势差避免把往复运动累计成单向正进展。物体真值只在动作确定后的奖励与审计侧读取。
 
 优化使用 PPO 式概率比裁剪 **0.15**、零残差锚点 KL 系数 **0.01**、旧策略 KL 早停 **0.02**、Adam $3\times10^{-4}$、每批最多 8 个 epoch。存储并复算 **tanh、裁剪与安全变换之前**的潜变量概率，避免拿改写后的执行动作计算错误似然。
 
